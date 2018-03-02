@@ -4,4 +4,4 @@ RUN apt-get update && apt-get install -y --force-yes --no-install-recommends --n
   texinfo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/  \
-    && installGithub.r MangoTheCat/goodpractice
+    && installGithub.r r-lib/devtools MangoTheCat/goodpractice
