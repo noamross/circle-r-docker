@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-remove-essen
     && rm texlive-local.deb \
     && wget -qO- "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | sh \
     && tlmgr install "inconsolata" "times" "tex" "helvetic" "dvips" \
-    && tlmgr path add \
     && Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
     && apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends --no-upgrade \
          texinfo qpdf pandoc pandoc-citeproc \
