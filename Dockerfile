@@ -1,7 +1,7 @@
 FROM rocker/r-ver:latest
 
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends --no-upgrade \
-  git wget libcairo2-dev libssl-dev libssh2-1-dev ssh libcurl4-openssl-dev libxml2-dev zlib1g-dev \
+  git sudo wget libcairo2-dev libssl-dev libssh2-1-dev ssh libcurl4-openssl-dev libxml2-dev zlib1g-dev \
     && wget "https://travis-bin.yihui.name/texlive-local.deb" \
     && sudo dpkg -i texlive-local.deb \
     && rm texlive-local.deb \
